@@ -53,3 +53,28 @@ components:
         email:
           type: string
           example: alex@gmail.com
+    Gallery:
+      type: array
+      items:
+        $ref: '#/components/schemas/Post'
+    Post:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 2873
+        name:
+          type: string
+          example: Первый день в Surf
+        img_url:
+          type: string
+          example: http://simple.ru/api/...
+        data:
+          type: string
+          example: 28.01.22
+        description:
+          type: string
+          example: Для бариста
+        is_favorite:
+          type: boolean
+          example: true
