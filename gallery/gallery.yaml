@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: Галерея
+  version: 1.0.11
+  description: Позволяет просматривать галерею и добавлять посты в избранное 
+paths:
+  /gallery:
+    get:
+      summary: ''
+      responses:
+        '200':
+          description: Операция прошла успешно
+          content:
+            application/json:
+              schema:
+                $ref: '#/common/models/components/schemas/Gallery'
+        '403':
+          description: Что то пошло не так.Попробуйте снова
+        "401":
+          description: Пользователь не авторизован
+  /search:
+    get:
+      summary: Предоставляет список постов по поиску пользователя
+      parameters:
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Операция прошла успешно
+          content:
+            application/json:
+              schema:
+                $ref: '#/common/models/components/schemas/Gallery'
+        '403':
+          description: Что то пошло не так.Попробуйте снова
+        "401":
+          description: Пользователь не авторизован
+  /change_favorite_state:
+    post:
+      parameters:
+        - name: id
+          in: query
+          description: ID пользователя
+          required: true
+          schema:
+            type: integer
+        - name: state
+          in: query
+          description: Состояние поста
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Операция прошла успешно
+        '403':
+          description: Что то пошло не так.Попробуйте снова
+        '401':
+          description: Пользователь не авторизован
