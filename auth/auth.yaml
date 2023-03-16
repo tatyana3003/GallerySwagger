@@ -1,2 +1,59 @@
-testing
-reading
+openapi: 3.0.3
+info:
+  title: Галерея
+  version: 1.0.11
+  description: Авторизация 
+tags:
+  - name: auth
+    description: Авторизация пользователя
+paths:
+  /auth:
+    post:
+      tags:
+        - auth
+      requestBody:
+        description: Авторизует пользователя
+        content:
+          application/json:
+            schema:
+              $ref: '#/common/models/components/schemas/Auth'
+        required: true
+      responses:
+        '200':
+          description: Операция прошла успешно
+          content:
+            application/json:
+              schema:
+                $ref: '#common/models/components/schemas/User'          
+        '400':
+          description: Неправильно введен логин или пароль
+  /logout:
+    post:
+      tags:
+        - auth
+      responses:
+        '200':
+          description: Операция прошла успешно
+        '403':
+          description: Что то пошло не так.Попробуйте снова
+        "401":
+          description: Пользователь не авторизован
+  /refresh_token:
+    post:
+      tags:
+      - auth
+      requestBody:
+        description: Авторизует пользователя
+        content:
+          application/json:
+            schema:
+              $ref: '#/common/models/components/schemas/Tokens'
+      responses:
+        '200':
+          description: Операция прошла успешно
+          content:
+            application/json:
+              schema:
+                $ref: '#/common/models/components/schemas/Tokens'
+        '403':
+          description: Что то пошло не так.Попробуйте позже
