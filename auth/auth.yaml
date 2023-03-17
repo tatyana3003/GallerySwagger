@@ -15,7 +15,7 @@ paths:
         required: true
       responses:
         '200':
-          description: Операция прошла успешно
+          description: Авторизация прошла успешно
           content:
             application/json:
               schema:
@@ -26,7 +26,7 @@ paths:
     post:
       responses:
         '200':
-          description: Операция прошла успешно
+          description: Логаут выполнен успешно
         '403':
           description: Что-то пошло не так. Попробуйте снова
         '401':
@@ -41,7 +41,7 @@ paths:
               $ref: '#/common/models/components/schemas/Tokens'
       responses:
         '200':
-          description: Операция прошла успешно
+          description: Авторизация прошла успешно
           content:
             application/json:
               schema:

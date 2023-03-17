@@ -26,18 +26,18 @@ components:
     Tokens:
       type: object
       properties:
-        refresh_token:
-          type: string
-          example: TDY7t34tgf
         accsess_token: 
           type: string
           example: TDY7t34tgfhvivir
+        refresh_token:
+          type: string
+          example: TDY7t34tgf
     Profile:
       type: object
       properties:
         avatar_url:
           type: string
-          example: http://simple.ru/api?id={}
+          example: picture_1.jpg
         name:
           type: string
           example: Александра Новикова
@@ -68,7 +68,7 @@ components:
           example: Первый день в Surf
         img_url:
           type: string
-          example: http://simple.ru/api/...
+          example: picture_2.jpg
         data:
           type: string
           example: 28.01.22

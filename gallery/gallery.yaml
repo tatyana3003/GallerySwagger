@@ -9,7 +9,7 @@ paths:
       summary: ''
       responses:
         '200':
-          description: Операция прошла успешно
+          description: Список актуальной галерии получен
           content:
             application/json:
               schema:
@@ -28,8 +28,8 @@ paths:
           schema:
             type: string
       responses:
-        '200':
-          description: Операция прошла успешно
+        '200': 
+          description: Список искомых постов получен
           content:
             application/json:
               schema:
@@ -54,7 +54,7 @@ paths:
             type: boolean
       responses:
         '200':
-          description: Операция прошла успешно
+          description: Значение параметра is_favorite изменено
         '403':
           description: Что-то пошло не так. Попробуйте снова
         '401':
