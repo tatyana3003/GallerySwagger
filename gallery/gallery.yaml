@@ -15,7 +15,7 @@ paths:
               schema:
                 $ref: '#/common/models/components/schemas/Gallery'
         '403':
-          description: Что то пошло не так.Попробуйте снова
+          description: Что-то пошло не так. Попробуйте снова
         "401":
           description: Пользователь не авторизован
   /search:
@@ -35,7 +35,7 @@ paths:
               schema:
                 $ref: '#/common/models/components/schemas/Gallery'
         '403':
-          description: Что то пошло не так.Попробуйте снова
+          description: Что-то пошло не так. Попробуйте снова
         "401":
           description: Пользователь не авторизован
   /change_favorite_state:
@@ -56,6 +56,6 @@ paths:
         '200':
           description: Операция прошла успешно
         '403':
-          description: Что то пошло не так.Попробуйте снова
+          description: Что-то пошло не так. Попробуйте снова
         '401':
           description: Пользователь не авторизован
