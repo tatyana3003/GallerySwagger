@@ -35,7 +35,7 @@ paths:
         '200':
           description: Операция прошла успешно
         '403':
-          description: Что то пошло не так.Попробуйте снова
+          description: Что-то пошло не так. Попробуйте снова
         "401":
           description: Пользователь не авторизован
   /refresh_token:
@@ -56,4 +56,4 @@ paths:
               schema:
                 $ref: '#/common/models/components/schemas/Tokens'
         '403':
-          description: Что то пошло не так.Попробуйте позже
+          description: Что-то пошло не так. Попробуйте позже
