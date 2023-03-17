@@ -16,7 +16,7 @@ paths:
                 $ref: '#/common/models/components/schemas/Gallery'
         '403':
           description: Что-то пошло не так. Попробуйте снова
-        "401":
+        '401':
           description: Пользователь не авторизован
   /search:
     get:

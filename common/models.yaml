@@ -53,7 +53,7 @@ components:
         email:
           type: string
           example: alex@gmail.com
-    Gallery:
+    PostList:
       type: array
       items:
         $ref: '#/components/schemas/Post'
