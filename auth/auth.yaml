@@ -3,14 +3,9 @@ info:
   title: Галерея
   version: 1.0.11
   description: Авторизация 
-tags:
-  - name: auth
-    description: Авторизация пользователя
 paths:
   /auth:
     post:
-      tags:
-        - auth
       requestBody:
         description: Авторизует пользователя
         content:
@@ -29,8 +24,6 @@ paths:
           description: Неправильно введен логин или пароль
   /logout:
     post:
-      tags:
-        - auth
       responses:
         '200':
           description: Операция прошла успешно
@@ -40,8 +33,6 @@ paths:
           description: Пользователь не авторизован
   /refresh_token:
     post:
-      tags:
-      - auth
       requestBody:
         description: Авторизует пользователя
         content:
