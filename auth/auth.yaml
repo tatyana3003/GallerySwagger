@@ -11,7 +11,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/common/models/components/schemas/Auth'
+              $ref: '../common/models.yaml#/components/schemas/Auth'
         required: true
       responses:
         '200':
@@ -19,7 +19,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/common/models/components/schemas/User'          
+                $ref: '../common/models.yaml#/components/schemas/User'          
         '400':
           description: Неправильно введен логин или пароль
   /logout:
@@ -38,13 +38,13 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/common/models/components/schemas/Tokens'
+              $ref: '../common/models.yaml#/components/schemas/Tokens'
       responses:
         '200':
           description: Обновление пары токенов прошло успешно
           content:
             application/json:
               schema:
-                $ref: '#/common/models/components/schemas/Tokens'
+                $ref: '../common/models.yaml#/components/schemas/Tokens'
         '403':
           description: Что-то пошло не так. Попробуйте позже

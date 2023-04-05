@@ -13,7 +13,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/common/models/components/schemas/PostList'
+                $ref: '../common/models.yaml#/components/schemas/PostList'
         '403':
           description: Что-то пошло не так. Попробуйте снова
         '401':
@@ -33,7 +33,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/common/models/components/schemas/PostList'
+                $ref: '../common/models.yaml#/components/schemas/PostList'
         '403':
           description: Что-то пошло не так. Попробуйте снова
         '401':

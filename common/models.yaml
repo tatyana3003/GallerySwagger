@@ -16,13 +16,9 @@ components:
       type: object
       properties:
         tokens:
-          type: object
-          items:
-            $ref: '#/common/models/components/schemas/Tokens'
+            $ref: 'models.yaml#/components/schemas/Tokens'
         profile:
-          type: object
-          items:
-            $ref: '#/common/models/components/schemas/Profile'
+            $ref: 'models.yaml#/components/schemas/Profile'
     Tokens:
       type: object
       properties:
@@ -56,7 +52,7 @@ components:
     PostList:
       type: array
       items:
-        $ref: '#/common/models/components/schemas/Post'
+        $ref: 'models.yaml#/components/schemas/Post'
     Post:
       type: object
       properties:
