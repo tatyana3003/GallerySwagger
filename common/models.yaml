@@ -18,11 +18,11 @@ components:
         tokens:
           type: object
           items:
-            $ref: '#/components/schemas/Tokens'
+            $ref: '#/common/models/components/schemas/Tokens'
         profile:
           type: object
           items:
-            $ref: '#/components/schemas/Profile'
+            $ref: '#/common/models/components/schemas/Profile'
     Tokens:
       type: object
       properties:
@@ -56,7 +56,7 @@ components:
     PostList:
       type: array
       items:
-        $ref: '#/components/schemas/Post'
+        $ref: '#/common/models/components/schemas/Post'
     Post:
       type: object
       properties:
