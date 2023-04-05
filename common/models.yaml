@@ -37,7 +37,7 @@ components:
       properties:
         avatar_url:
           type: string
-          example: picture_1.jpg
+          example: http://simple.ru/picture_1.jpg
         name:
           type: string
           example: Александра Новикова
@@ -68,7 +68,7 @@ components:
           example: Первый день в Surf
         img_url:
           type: string
-          example: picture_2.jpg
+          example: http://simple.ru/picture_2.jpg
         data:
           type: string
           example: 28.01.22
