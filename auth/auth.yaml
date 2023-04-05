@@ -34,14 +34,14 @@ paths:
   /refresh_token:
     post:
       requestBody:
-        description: Авторизует пользователя
+        description: Обновляет пару токенов
         content:
           application/json:
             schema:
               $ref: '#/common/models/components/schemas/Tokens'
       responses:
         '200':
-          description: Авторизация прошла успешно
+          description: Обновление пары токенов прошло успешно
           content:
             application/json:
               schema:
