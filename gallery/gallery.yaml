@@ -36,7 +36,7 @@ paths:
                 $ref: '#/common/models/components/schemas/PostList'
         '403':
           description: Что-то пошло не так. Попробуйте снова
-        "401":
+        '401':
           description: Пользователь не авторизован
   /change_favorite_state:
     post:
