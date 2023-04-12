@@ -16,13 +16,9 @@ components:
       type: object
       properties:
         tokens:
-          type: object
-          items:
-            $ref: '#/components/schemas/Tokens'
+            $ref: 'models.yaml#/components/schemas/Tokens'
         profile:
-          type: object
-          items:
-            $ref: '#/components/schemas/Profile'
+            $ref: 'models.yaml#/components/schemas/Profile'
     Tokens:
       type: object
       properties:
@@ -37,7 +33,7 @@ components:
       properties:
         avatar_url:
           type: string
-          example: picture_1.jpg
+          example: http://simple.ru/picture_1.jpg
         name:
           type: string
           example: Александра Новикова
@@ -56,7 +52,7 @@ components:
     PostList:
       type: array
       items:
-        $ref: '#/components/schemas/Post'
+        $ref: 'models.yaml#/components/schemas/Post'
     Post:
       type: object
       properties:
@@ -68,7 +64,7 @@ components:
           example: Первый день в Surf
         img_url:
           type: string
-          example: picture_2.jpg
+          example: http://simple.ru/picture_2.jpg
         data:
           type: string
           example: 28.01.22
